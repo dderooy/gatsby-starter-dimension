@@ -18,10 +18,10 @@ const Header = props => (
           <a
             href="#/"
             onClick={() => {
-              props.onOpenArticle('work')
+              props.onOpenArticle('skills')
             }}
           >
-            Work
+            Skills
           </a>
         </li>
         <li>

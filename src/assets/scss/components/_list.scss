@@ -104,6 +104,8 @@
 					}
 
 					> * {
+						display: inline-block;
+						padding-right: (_size(element-margin) * 0.25);
 						margin-bottom: 0;
 					}
 				}
@@ -159,8 +161,11 @@
 					}
 
 					> * {
+						display: inline-block;
+						
 						width: 100%;
 						margin: 0 !important;
+						
 
 						&.icon {
 							&:before {

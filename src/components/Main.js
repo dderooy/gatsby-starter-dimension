@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
+//import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
@@ -23,22 +23,65 @@ class Main extends React.Component {
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
         <article
-          id="work"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
+          id="skills"
+          className={`${this.props.article === 'skills' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Work</h2>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
-          <p>
-            Co-op work
-          </p>
-          <p>
-            
-          </p>
+          <h2 className="major">Skills</h2>
+
+          <ul className="actions vertical">
+            <li>
+              <h3>Frontend:</h3>
+              <span className="icon fa-laptop" />
+              <span className="icon fa-mobile" />
+            </li>
+            <li>
+              <p>React &nbsp; || &nbsp; Core JS</p>
+            </li>
+            <li>
+              <p>Styled Components &nbsp; || &nbsp; Sass</p>
+            </li>
+          </ul>
+
+          <ul className="actions vertical">
+            <li>
+              <h3>Backend:</h3>
+              <span className="icon fa-server" />
+            </li>
+            <li>Java + Spring Boot</li>
+            <li>Node + Express</li>
+            <li>
+              <p>REST &nbsp; || &nbsp; SOAP &nbsp; || &nbsp; GraphQL</p>
+            </li>
+          </ul>
+
+          <ul className="actions vertical">
+            <li>
+              <h3>DevOps:</h3>
+              <span className="icon fa-cloud" />
+              <span className="icon fa-terminal" />
+            </li>
+            <li>
+              <p>Git &nbsp; || &nbsp; SVN</p>
+            </li>
+            <li>Docker</li>
+            <li>CI + Jenkins</li>
+            <li>
+              <p>Jira &nbsp; || &nbsp; Trello</p>
+            </li>
+          </ul>
+
+          <ul className="actions vertical">
+            <li>
+              <h3>Databases:</h3>
+              <span className="icon fa-database" />
+            </li>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+          </ul>
+
           {close}
         </article>
 
@@ -53,9 +96,7 @@ class Main extends React.Component {
           <span className="image left">
             <img src={pic03} alt="" />
           </span>
-          <p>
-            Problem solving has always been something I have enjoyed. 
-          </p>
+          <p>Problem solving has always been something I have enjoyed.</p>
           {close}
         </article>
 
