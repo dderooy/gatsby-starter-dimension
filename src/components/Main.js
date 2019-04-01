@@ -31,56 +31,75 @@ class Main extends React.Component {
         >
           <h2 className="major">Skills</h2>
 
-          <ul className="actions vertical">
-            <li>
-              <h3>Frontend:</h3>
-              <span className="icon fa-laptop" />
-              <span className="icon fa-mobile" />
-            </li>
-            <li>
-              <p>React &nbsp; || &nbsp; Core JS</p>
-            </li>
-            <li>
-              <p>Styled Components &nbsp; || &nbsp; Sass</p>
-            </li>
-          </ul>
-
-          <ul className="actions vertical">
-            <li>
-              <h3>Backend:</h3>
-              <span className="icon fa-server" />
-            </li>
-            <li>Java + Spring Boot</li>
-            <li>Node + Express</li>
-            <li>
-              <p>REST &nbsp; || &nbsp; SOAP &nbsp; || &nbsp; GraphQL</p>
-            </li>
-          </ul>
-
-          <ul className="actions vertical">
-            <li>
-              <h3>DevOps:</h3>
-              <span className="icon fa-cloud" />
-              <span className="icon fa-terminal" />
-            </li>
-            <li>
-              <p>Git &nbsp; || &nbsp; SVN</p>
-            </li>
-            <li>Docker</li>
-            <li>CI + Jenkins</li>
-            <li>
-              <p>Jira &nbsp; || &nbsp; Trello</p>
-            </li>
-          </ul>
-
-          <ul className="actions vertical">
-            <li>
-              <h3>Databases:</h3>
-              <span className="icon fa-database" />
-            </li>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-          </ul>
+          <div className="grid-container">
+            <div className="grid-item">
+              <ul className="actions vertical">
+                <li>
+                  <h3>Frontend:</h3>
+                  <span className="icon fa-laptop" />
+                  <span className="icon fa-mobile" />
+                </li>
+                <li>
+                  <p>React &nbsp; || &nbsp; Core JS</p>
+                </li>
+                <li>
+                  <p>Styled Components &nbsp; || &nbsp; Sass</p>
+                </li>
+              </ul>
+            </div>
+            <div className="grid-item">
+              <ul className="actions vertical">
+                <li>
+                  <h3>Backend:</h3>
+                  <span className="icon fa-server" />
+                </li>
+                <li>
+                  <p>Java + Spring Boot</p>
+                </li>
+                <li>
+                  <p>Node + Express</p>
+                </li>
+                <li>
+                  <p>REST &nbsp; || &nbsp; SOAP &nbsp; || &nbsp; GraphQL</p>
+                </li>
+              </ul>
+            </div>
+            <div className="grid-item">
+              <ul className="actions vertical">
+                <li>
+                  <h3>DevOps:</h3>
+                  <span className="icon fa-cloud" />
+                  <span className="icon fa-terminal" />
+                </li>
+                <li>
+                  <p>Git &nbsp; || &nbsp; SVN</p>
+                </li>
+                <li>
+                  <p>Docker</p>
+                </li>
+                <li>
+                  <p>CI + Jenkins</p>
+                </li>
+                <li>
+                  <p>Jira &nbsp; || &nbsp; Trello</p>
+                </li>
+              </ul>
+            </div>
+            <div className="grid-item">
+              <ul className="actions vertical">
+                <li>
+                  <h3>Databases:</h3>
+                  <span className="icon fa-database" />
+                </li>
+                <li>
+                  <p>MySQL</p>
+                </li>
+                <li>
+                  <p>PostgreSQL</p>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           {close}
         </article>
