@@ -115,7 +115,9 @@ class Main extends React.Component {
           <span className="image left">
             <img src={pic03} alt="" />
           </span>
-          <p>Problem solving has always been something I have enjoyed.</p>
+          <p>In 2017 David graduated from Systems Design Engineering at Waterloo. Over the course of his career so far, David has worked for both startup and corporate enterprises. </p>
+          <p>David is passionate about learning from others, and values team relationships. He like to know the big picture, and keeps an eye on what the final outcome of project will be. </p>
+          <p>"The value of an idea lies in the using of it" - Thomas Edison.</p>
           {close}
         </article>
 
