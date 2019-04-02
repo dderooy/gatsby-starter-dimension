@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import AboutPic from '../images/about.jpg'
 
 class Main extends React.Component {
+
   render() {
     let close = (
       <div
@@ -126,25 +127,6 @@ class Main extends React.Component {
           {close}
         </article>
 
-        {/* <article
-          id="hobby"
-          className={`${this.props.article === 'hobby' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={{ display: 'none' }}
-        >
-          <h2 className="major">
-            Hobbies <span className="icon fa-thumbs-o-up" />
-          </h2>
-          <span className="image main">
-            <img src={pic01} alt="" />
-          </span>
-          <p>
-            <input type="button" value="Copy" />
-          </p>
-          {close}
-        </article> */}
-
         <article
           id="contact"
           className={`${this.props.article === 'contact' ? 'active' : ''} ${
@@ -157,6 +139,7 @@ class Main extends React.Component {
             name="contact"
             method="POST"
             data-netlify="true"
+            action=""
           >
             <div className="field half first">
               <label htmlFor="name">Name</label>
@@ -180,21 +163,6 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            {/* <li>
-              <a href="#/" className="icon fa-twitter">
-                <span className="label">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="#/" className="icon fa-facebook">
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="#/" className="icon fa-instagram">
-                <span className="label">Instagram</span>
-              </a>
-            </li> */}
             <li>
               <a href="https://github.com/dderooy" className="icon fa-github">
                 <span className="label">GitHub</span>
