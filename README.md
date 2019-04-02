@@ -1,12 +1,9 @@
-# gatsby-starter-dimension
+# Business Card Website
 
-**This is a starter for Gatsby.js V2.**
+**Built using Gatsby.js V2.**  
+[Take Gatsby for a spin](https://www.gatsbyjs.org/)
 
-**The older V1 version of this starter can be found on the v1 branch:**
-
-Gatsby.js V2 starter based on the Dimension site template, designed by HTML5 UP. Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
-
-## Preview
+## Preview this site
 
 https://gatsby-dimension.surge.sh/
 
@@ -14,6 +11,6 @@ https://gatsby-dimension.surge.sh/
 
 Install this starter (assuming Gatsby is installed) by running from your CLI:
 <br/>
-`gatsby new gatsby-starter-dimension https://github.com/codebushi/gatsby-starter-dimension`
+`gatsby new website-business-card https://github.com/dderooy/website-business-card.git`
 
 Run `gatsby develop` in the terminal to start the dev site.
