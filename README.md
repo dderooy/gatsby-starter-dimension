@@ -1,11 +1,12 @@
 # Business Card Website
 
-**Built using Gatsby.js V2.**  
+## Built using Gatsby.js V2
+
 [Take Gatsby for a spin](https://www.gatsbyjs.org/)
 
 ## Preview this site
 
-https://gatsby-dimension.surge.sh/
+https://derooy.netlify.com/
 
 ## Installation
 
