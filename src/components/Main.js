@@ -153,7 +153,14 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form name="contact" method="POST" data-netlify="true" action="#">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            action={() => {
+              this.props.onOpenArticle('success')
+            }}
+          >
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -197,6 +204,22 @@ class Main extends React.Component {
               </a>
             </li>
           </ul>
+          {close}
+        </article>
+
+        <article
+          id="success"
+          className={`${this.props.article === 'success' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">
+            Thanks for reaching out! <span className="icon fa-thumbs-o-up" />
+          </h2>
+          <p>
+            Replies will be sent at earliest convenience 
+          </p>
           {close}
         </article>
       </div>
