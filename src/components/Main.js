@@ -157,9 +157,7 @@ class Main extends React.Component {
             name="contact"
             method="POST"
             data-netlify="true"
-            action={() => {
-              this.props.onOpenArticle('success')
-            }}
+            action="/#"
           >
             <div className="field half first">
               <label htmlFor="name">Name</label>
