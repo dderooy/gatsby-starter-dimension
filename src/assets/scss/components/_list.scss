@@ -148,12 +148,11 @@ ul {
     }
 
     @include breakpoint(xsmall) {
-      margin: 0 auto _size(element-margin) auto;
+      margin: 0 auto _size(element-margin) (_size(element-margin) * 2);
 
       li {
         padding: (_size(element-margin) * 0.5) 0 0 0;
         display: block;
-        //text-align: center;
         width: 100%;
 
         &:first-child {
@@ -161,12 +160,9 @@ ul {
         }
 
         > * {
-		  display: inline-block;
-          margin: 0 (_size(element-margin) * 0.45);
-
           &.icon {
             &:before {
-              margin-left: -2em;
+            	//margin-left: -2em;
             }
           }
         }

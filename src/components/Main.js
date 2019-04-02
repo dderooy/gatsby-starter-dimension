@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import pic01 from '../images/pic01.jpg'
-//import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
+import AboutPic from '../images/about.jpg'
 
 class Main extends React.Component {
   render() {
@@ -113,15 +110,23 @@ class Main extends React.Component {
         >
           <h2 className="major">About</h2>
           <span className="image left">
-            <img src={pic03} alt="" />
+            <img src={AboutPic} alt="" />
           </span>
-          <p>In 2017 David graduated from Systems Design Engineering at Waterloo. Over the course of his career so far, David has worked for both startup and corporate enterprises. </p>
-          <p>David is passionate about learning from others, and values team relationships. He like to know the big picture, and keeps an eye on what the final outcome of project will be. </p>
+          <p>
+            In 2017 David graduated from Systems Design Engineering at Waterloo.
+            Over the course of his career so far, David has worked for both
+            startup and corporate enterprises.{' '}
+          </p>
+          <p>
+            David is passionate about learning from others, and values team
+            relationships. He likes to know the big picture, and keeps an eye on
+            the final project outcome.{' '}
+          </p>
           <p>"The value of an idea lies in the using of it" - Thomas Edison.</p>
           {close}
         </article>
 
-        <article
+        {/* <article
           id="hobby"
           className={`${this.props.article === 'hobby' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
@@ -138,7 +143,7 @@ class Main extends React.Component {
             <input type="button" value="Copy" />
           </p>
           {close}
-        </article>
+        </article> */}
 
         <article
           id="contact"
@@ -171,7 +176,7 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            <li>
+            {/* <li>
               <a href="#/" className="icon fa-twitter">
                 <span className="label">Twitter</span>
               </a>
@@ -185,9 +190,9 @@ class Main extends React.Component {
               <a href="#/" className="icon fa-instagram">
                 <span className="label">Instagram</span>
               </a>
-            </li>
+            </li> */}
             <li>
-              <a href="#/" className="icon fa-github">
+              <a href="https://github.com/dderooy" className="icon fa-github">
                 <span className="label">GitHub</span>
               </a>
             </li>

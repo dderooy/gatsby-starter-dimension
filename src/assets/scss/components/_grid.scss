@@ -12,7 +12,6 @@
   .grid-item {
     border-radius: 10px;
     display: flex;
-    align-items: left;
   }
 
   @include breakpoint(xsmall) {

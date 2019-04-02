@@ -34,7 +34,7 @@ const Header = props => (
             About
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href="#/"
             onClick={() => {
@@ -43,7 +43,7 @@ const Header = props => (
           >
             Hobbies
           </a>
-        </li>
+        </li> */}
         <li>
           <a
             href="#/"
