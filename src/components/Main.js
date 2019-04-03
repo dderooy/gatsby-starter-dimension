@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 import AboutPic from '../images/about.jpg'
 
 class Main extends React.Component {
+  formSuccess() {
+    this.props.onChangeArticle('success')
+  }
+
   render() {
     let close = (
       <div
@@ -138,9 +142,7 @@ class Main extends React.Component {
             name="contact"
             method="POST"
             data-netlify="true"
-            action="javascript:() => {
-                    this.props.onChangeArticle('success')
-                  };"
+            action="javascript:formSuccess();"
           >
             <div className="field half first">
               <label htmlFor="name">Name</label>
