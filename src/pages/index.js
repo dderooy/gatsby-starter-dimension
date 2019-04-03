@@ -16,6 +16,7 @@ class IndexPage extends React.Component {
       loading: 'is-loading',
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
+    this.handleChangeArticle = this.handleChangeArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
     this.setWrapperRef = this.setWrapperRef.bind(this)
     this.handleClickOutside = this.handleClickOutside.bind(this)
@@ -56,6 +57,12 @@ class IndexPage extends React.Component {
         articleTimeout: !this.state.articleTimeout,
       })
     }, 350)
+  }
+
+  handleChangeArticle(article) {
+    this.setState({
+      article: article,
+    })
   }
 
   handleCloseArticle() {
@@ -103,6 +110,7 @@ class IndexPage extends React.Component {
               timeout={this.state.timeout}
               articleTimeout={this.state.articleTimeout}
               article={this.state.article}
+              onChangeArticle={this.handleChangeArticle}
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
             />

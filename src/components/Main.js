@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import AboutPic from '../images/about.jpg'
 
 class Main extends React.Component {
-
   render() {
     let close = (
       <div
@@ -139,7 +138,9 @@ class Main extends React.Component {
             name="contact"
             method="POST"
             data-netlify="true"
-            action=""
+            action="javascript:() => {
+                    this.props.onChangeArticle('success')
+                  };"
           >
             <div className="field half first">
               <label htmlFor="name">Name</label>
@@ -180,11 +181,9 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">
-            Thanks for reaching out! <span className="icon fa-thumbs-o-up" />
+            Thanks for reaching out <span className="icon fa-thumbs-o-up" />
           </h2>
-          <p>
-            Replies will be sent at earliest convenience 
-          </p>
+          <p className="align-center">Your message has been received</p>
           {close}
         </article>
       </div>
@@ -196,6 +195,7 @@ Main.propTypes = {
   route: PropTypes.object,
   article: PropTypes.string,
   articleTimeout: PropTypes.bool,
+  onChangeArticle: PropTypes.func,
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
   setWrapperRef: PropTypes.func.isRequired,
