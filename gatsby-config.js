@@ -2,15 +2,15 @@ module.exports = {
   siteMetadata: {
     title: "David DeRooy - Business Card Website",
     author: "David DeRooy",
-    description: "A portfolio website"
+    description: "A Business Card Website"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'David DeRooy - Business Card',
+        short_name: 'Business Card',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
