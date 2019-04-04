@@ -29,7 +29,7 @@ export default class NetlifyForm extends React.Component {
         ...this.state
       })
     })
-      .then(() => navigate(form.getAttribute("action")))
+      //.then(() => navigate(form.getAttribute("action")))
       .then(() => this.props.onChangeArticle('success'))
       .catch(error => alert(error));
   };
