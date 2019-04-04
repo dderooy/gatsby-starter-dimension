@@ -142,7 +142,7 @@ class Main extends React.Component {
             name="contact"
             method="POST"
             data-netlify="true"
-            action="javascript:formSuccess();"
+            //action="javascript:formSuccess();"
           >
             <div className="field half first">
               <label htmlFor="name">Name</label>
