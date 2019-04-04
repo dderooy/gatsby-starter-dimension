@@ -29,8 +29,8 @@ export default class NetlifyForm extends React.Component {
         ...this.state
       })
     })
-      //.then(() => navigate(form.getAttribute("action")))
       .then(() => this.props.onChangeArticle('success'))
+      .then(() => setTimeout(navigate(form.getAttribute("action")), 5000))
       .catch(error => alert(error));
   };
 
@@ -39,7 +39,7 @@ export default class NetlifyForm extends React.Component {
         <form
           name="contact"
           method="post"
-          action="/#"
+          action="/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
