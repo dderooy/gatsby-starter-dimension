@@ -54,15 +54,15 @@ export default class NetlifyForm extends React.Component {
           </p>
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" onChange={this.handleChange} />
+              <input type="text" name="name" id="name" onChange={this.handleChange} required/>
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" onChange={this.handleChange} />
+              <input type="text" name="email" id="email" onChange={this.handleChange} required/>
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4" onChange={this.handleChange}/>
+              <textarea name="message" id="message" rows="4" onChange={this.handleChange} required/>
             </div>
             <ul className="actions">
               <li>
