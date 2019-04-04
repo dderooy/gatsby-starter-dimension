@@ -1,12 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AboutPic from '../images/about.jpg'
+import NetlifyForm from './NetlifyForm'
 
 class Main extends React.Component {
-  formSuccess() {
-    this.props.onChangeArticle('success')
-  }
-
   render() {
     let close = (
       <div
@@ -138,33 +135,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            //action="javascript:formSuccess();"
-          >
-            <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4" />
-            </div>
-            <ul className="actions">
-              <li>
-                <input type="submit" value="Send Message" name="submit" className="special" />
-              </li>
-              <li>
-                <input type="reset" value="Reset" name="reset"/>
-              </li>
-            </ul>
-          </form>
+          <NetlifyForm onChangeArticle={this.props.onChangeArticle} />
           <ul className="icons">
             <li>
               <a href="https://github.com/dderooy" className="icon fa-github">
