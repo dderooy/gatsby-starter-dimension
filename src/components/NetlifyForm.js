@@ -16,25 +16,19 @@ function validateEmail(email) {
 export default class NetlifyForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { formErrors: { email: false } }
+    this.state = { emailError: false }
   }
 
   handleChange = e => {
-    this.setState({ formData: { [e.target.name]: e.target.value } })
-    console.log(this.state.formData)
-  }
-
-  handleEmailChange = e => {
-    this.setState({ formData: { [e.target.name]: e.target.value } })
-    this.setState({ formErrors: { email: false } })
-    console.log(this.state.formData)
+    let formData = { ...this.state.formData }
+    formData[e.target.name] = e.target.value
+    this.setState({ emailError: false , formData })
   }
 
   handleSubmit = e => {
-    console.log(String(this.state.formData))
-    /* validateEmail(String(this.state.formData.email)) === false
-      ? this.setState({ formErrors: { email: true } })
-      : this.sendForm(e) */
+    validateEmail(this.state.emailError) === false
+      ? this.setState({ emailError: true })
+      : this.sendForm(e)
   }
 
   sendForm = e => {
@@ -86,7 +80,7 @@ export default class NetlifyForm extends React.Component {
           <label
             htmlFor="emailError"
             className="error"
-            style={!this.state.formErrors.email ? { display: 'none' } : {}}
+            style={!this.state.emailError ? { display: 'none' } : {}}
           >
             : Invalid Format
           </label>
@@ -94,7 +88,7 @@ export default class NetlifyForm extends React.Component {
             type="text"
             name="email"
             id="email"
-            onChange={this.handleEmailChange}
+            onChange={this.handleChange}
             required
           />
         </div>
