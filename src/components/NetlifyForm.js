@@ -8,7 +8,7 @@ function encode(data) {
     .join('&')
 }
 
-function validateEmail(email) {
+function validEmail(email) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   return re.test(String(email).toLowerCase())
 }
@@ -26,13 +26,13 @@ export default class NetlifyForm extends React.Component {
   }
 
   handleSubmit = e => {
-    validateEmail(this.state.emailError) === false
+    e.preventDefault()
+    validEmail(this.state.formData.email) === false
       ? this.setState({ emailError: true })
       : this.sendForm(e)
   }
 
   sendForm = e => {
-    e.preventDefault()
     const form = e.target
     fetch('/', {
       method: 'POST',
