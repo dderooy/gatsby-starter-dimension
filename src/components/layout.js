@@ -45,17 +45,15 @@ const Layout = ({ children, location }) => {
               src="https://www.googletagmanager.com/gtag/js?id=UA-20950808-2"
             />
 
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
+            <script type="text/javascript" defer>
+              {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
 
                     gtag('config', 'UA-20950808-2');
-                  `,
-              }}
-            />
+                `}
+            </script>
           </Helmet>
           {content}
         </>
